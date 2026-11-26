@@ -82,7 +82,8 @@
             background: none center/100% 100% no-repeat;
             z-index: 4;
             transform-origin: top center;
-            transition: transform .9s .25s,z-index 0s .7s
+            transition: transform 2.2s .25s ease-in-out,
+            z-index 0s 1.35s;
         }
 
         .seal {
@@ -224,6 +225,27 @@
                 animation-duration: .01s!important
             }
         }
+		
+		.envelope.open .flap-shadow {
+			animation: shadowOpening 2.2s .25s ease-in-out both;
+		}
+
+		@keyframes shadowOpening {
+			0% {
+				opacity: 0;
+				transform: scaleY(0.1);
+			}
+
+			50% {
+				opacity: 1;
+				transform: scaleY(0.8);
+			}
+
+			100% {
+				opacity: 0.15;
+				transform: scaleY(0.2);
+			}
+		}
     
         </style>
     
@@ -247,6 +269,8 @@
                 </div>
                 <div class="front">
                 </div>
+				<div class="flap-shadow">
+				</div>
                 <div class="flap">
                 </div>
                 <button class="seal" id="seal" aria-label="Apri la busta">
@@ -284,13 +308,13 @@
             env.classList.add('open');
             intro.classList.add('active');
 
-            setTimeout(() => intro.classList.add('vanish'), 1300);
+            setTimeout(() => intro.classList.add('vanish'), 2600);
 
             setTimeout(() => {
                 intro.style.display = 'none';
                 invite.classList.add('visible');
                 window.scrollTo(0, 0);
-            }, 2000);
+            }, 3300);
         };
 
         document.getElementById('replay').onclick = () => {
