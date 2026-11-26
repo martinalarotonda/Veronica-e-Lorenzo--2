@@ -179,11 +179,24 @@
         }
 
         .script {
-            font-family: 'Pinyon Script','Brush Script MT',cursive;
-            font-size: clamp(48px,12vw,75px);
-            font-weight: 400;
-            margin: 22px 0 0
-        }
+			font-family: 'Pinyon Script','Brush Script MT',cursive;
+			font-size: clamp(48px,12vw,75px);
+			font-weight: 400;
+			line-height: 0.95;
+			margin: 0;
+		}
+		
+		.names + .script_word {
+			margin-top: 35px;
+		}
+		
+        .script_word {
+			font-size: clamp(48px,12vw,75px);
+			font-weight: 600;
+			line-height: 0.9;
+			letter-spacing: 2px;
+			margin: 0;
+		}
 
         .date {
             font-size: 36px;
@@ -353,7 +366,9 @@
                 </svg>
                 <!-- Modifica qui i testi dell'invito -->
                 <div class="names">VERONICA <i>e</i> LORENZO</div>
-                <h1 class="script">Save the Date</h1>
+				<div class="script_word">SAVE</div>
+                <h1 class="script">The</h1>
+				<div class="script_word">DATE</div>
                 <div class="date">18.06.2027</div>
                 <svg class="branch" viewBox="0 0 100 65" fill="none" stroke="currentColor" stroke-width="1.4">
                     <path d="M20 60Q55 42 78 5M42 45Q18 43 17 22Q38 25 42 45M53 35Q77 40 88 22Q67 20 53 35M63 24Q42 20 46 4Q63 7 63 24M75 10Q83 0 92 2Q90 13 75 10"/>
