@@ -79,7 +79,8 @@
             z-index: 4;
             transform-origin: top center;
             transition: transform 2.2s .25s ease-in-out,
-            z-index 0s 1.35s;
+            z-index 0s 1.35s,
+            opacity 1.5s ease-in-out;
         }
 
         .seal {
@@ -243,7 +244,7 @@
 			pointer-events: none;
 
 			transition: height 2.2s .25s ease-in-out,
-						opacity .3s;
+						opacity 1.5s ease-in-out;
 		}
 
 
@@ -267,6 +268,21 @@
 				opacity: 0.15;
 				transform: scaleY(0.2);
 			}
+		}
+		
+		.back, .front, .flap-shadow {
+			transition: opacity 1.5s ease-in-out;
+		}
+
+		.envelope.dissolve .back,
+		.envelope.dissolve .front,
+		.envelope.dissolve .flap,
+		.envelope.dissolve .flap-shadow {
+			opacity: 0;
+		}
+
+		.envelope.dissolve .letter {
+			overflow: visible;
 		}
     
         </style>
@@ -326,18 +342,15 @@
 		env.querySelector('.letter').appendChild(paper.cloneNode(true));
 
         seal.onclick = () => {
-            seal.disabled = true;
-            env.classList.add('open');
-            intro.classList.add('active');
+			seal.disabled = true;
 
-            setTimeout(() => intro.classList.add('vanish'), 2600);
+			env.classList.add('open');
+			intro.classList.add('active');
 
-            setTimeout(() => {
-                intro.style.display = 'none';
-                invite.classList.add('visible');
-                window.scrollTo(0, 0);
-            }, 3300);
-        };
+			setTimeout(() => {
+				env.classList.add('dissolve');
+			}, 2300);
+		};
 
         document.getElementById('replay').onclick = () => {
             invite.classList.remove('visible');
