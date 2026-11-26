@@ -25,17 +25,18 @@
             justify-items: center;
             overflow: hidden;
             transition: opacity .7s;
-            padding: 20px
+            padding: 0
         }
 
         .envelope {
-            position: relative;
-            width: min(68vw,300px);
-            aspect-ratio: 872/1149;
-            perspective: 1200px;
-            isolation: isolate;
-            transition: transform 1s
-        }
+			position: relative;
+			width: 100vw;
+			max-width: none;
+			aspect-ratio: 872/1149;
+			perspective: 1200px;
+			isolation: isolate;
+			transition: transform 1s;
+		}
 
         .back,.front {
             position: absolute;
@@ -250,7 +251,7 @@
                 <button class="seal" id="seal" aria-label="Apri la busta">
                 </button>
             </div>
-            <div class="hint">Tocca il sigillo per aprire</div>
+            
         </main>
         <main class="invite" id="invite">
             <article class="paper">
