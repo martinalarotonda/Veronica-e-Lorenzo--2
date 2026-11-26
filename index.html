@@ -197,11 +197,25 @@
 			letter-spacing: 2px;
 			margin: 0;
 		}
+		
+		.script + .script_word {
+			margin-top: -15px;
+		}
+		
+		.heart-divider {
+			display: block;
+			width: 50%;
+			height: auto;
+			margin: 15px auto 5px;
+			color: #68452f;
+		}
 
         .date {
-            font-size: 36px;
-            letter-spacing: 4px;
-            margin: 5px 0 25px
+			font-size: clamp(36px,12vw,75px);
+			font-weight: 600;
+			line-height: 0.9;
+			letter-spacing: 4px;
+			margin: 5px 0 25px
         }
 
         .details {
@@ -369,10 +383,11 @@
 				<div class="script_word">SAVE</div>
                 <h1 class="script">The</h1>
 				<div class="script_word">DATE</div>
+				<svg class="heart-divider" viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 20 H125 M175 20 H295" stroke="currentColor" stroke-width="1" fill="none"/>
+					<path d="M153 34 C145 24 132 10 141 9 C147 6 151 15 151 20 C154 10 161 3 165 10 C170 17 155 30 147 36" fill="none" stroke="currentColor" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
                 <div class="date">18.06.2027</div>
-                <svg class="branch" viewBox="0 0 100 65" fill="none" stroke="currentColor" stroke-width="1.4">
-                    <path d="M20 60Q55 42 78 5M42 45Q18 43 17 22Q38 25 42 45M53 35Q77 40 88 22Q67 20 53 35M63 24Q42 20 46 4Q63 7 63 24M75 10Q83 0 92 2Q90 13 75 10"/>
-                </svg>
                 <div class="details">
                     <p>Ore 16:00<br>Parrocchia Santa Maria del Rosario<br>Sala di Cesenatico</p>
                     <p>Ricevimento presso<br>il Castello di Ribano<br>Savignano sul Rubicone</p>
