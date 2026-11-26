@@ -186,6 +186,13 @@
 			margin: 0;
 		}
 		
+		.castello {
+			font-family: 'Pinyon Script','Brush Script MT',cursive;
+			font-size: 30px;
+			line-height: 1;
+			margin: 0;
+		}
+		
 		.names + .script_word {
 			margin-top: 35px;
 		}
@@ -219,7 +226,7 @@
         }
 
         .details {
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.35
         }
 
@@ -285,7 +292,28 @@
 			opacity: 1;
 			height: 5%;
 		}
+		
+		.luogo {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			font-style: italic;
+			font-size: 16px;
+		}
 
+		.luogo::before,
+		.luogo::after {
+			content: "";
+			width: 20px;
+			height: 1px;
+			background-color: currentColor;
+		}
+
+		.castello + .luogo {
+			margin-top: -20px;
+		}
+		
 		@keyframes shadowOpening {
 			0% {
 				opacity: 0;
@@ -433,7 +461,7 @@
 
 						</g>
 					</svg>
-                    <p>RICEVIMENTO PRESSO<br>il Castello di Ribano<br>Savignano sul Rubicone</p>
+                    <p>RICEVIMENTO PRESSO<br><span class="castello">il Castello di Ribano</span><br><span class="luogo">Savignano sul Rubicone</span></p>
                 </div>
             </article>
         </main>
